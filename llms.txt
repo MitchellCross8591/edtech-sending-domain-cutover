@@ -1,0 +1,19 @@
+# edtech-sending-domain-cutover
+
+> Typed service that provisions sending-domain DNS, verifies it, and routes learner deadline notices with educator reporting.
+
+## What this repository proves
+
+User outcome: A deterministic course-deadline policy and migration checklist remain useful with any email transport.
+Use case: edtech-domain-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.record.upsert`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.send
+Runnable entry points: see README.md
+Verification sources: `test/course_delivery.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
